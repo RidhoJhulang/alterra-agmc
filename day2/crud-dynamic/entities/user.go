@@ -1,13 +1,13 @@
-package models
+package entities
 
-import "gorm.io/gorm"
+import (
+	"crud-dynamic/models"
+)
 
 type User struct {
-	gorm.Model
-	Id       string `json:"id_user" form:"id_user"`
-	Name     string `json:"name" form:"name"`
-	Email    string `json:"email" form:"email"`
-	Password string `json:"password" form:"password"`
+	Name     string `json:"name"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
 }
 
 type UserDTO struct {
@@ -24,8 +24,8 @@ func ToUserDTO(user *User) *UserDTO {
 	}
 }
 
-func AssembUserDTO(user *UserDTO) *User {
-	return &User{
+func AssembUserDTO(user *UserDTO) *models.User {
+	return &models.User{
 		Name:     user.Name,
 		Email:    user.Email,
 		Password: user.Password,

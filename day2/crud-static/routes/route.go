@@ -2,8 +2,6 @@ package routes
 
 import (
 	"crud-static/controllers"
-
-	"github.com/labstack/echo/v4"
 )
 
 func New() *echo.Echo {

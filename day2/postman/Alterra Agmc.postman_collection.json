@@ -1469,7 +1469,358 @@
 				},
 				{
 					"name": "CRUD-Dynamic",
-					"item": []
+					"item": [
+						{
+							"name": "addUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Fajar Berlian\",\r\n    \"email\": \"fajarberlian@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base-url}}/users/:id",
+									"host": [
+										"{{base-url}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "addUser",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\" : \"Fajar Berlian\",\r\n    \"email\": \"fajarberlian@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base-url}}/users",
+											"host": [
+												"{{base-url}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=UTF-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 15 Sep 2022 13:45:07 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "229"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"users\": {\n        \"ID\": 3,\n        \"CreatedAt\": \"2022-09-15T20:45:07.9779147+07:00\",\n        \"UpdatedAt\": \"2022-09-15T20:45:07.9779147+07:00\",\n        \"DeletedAt\": null,\n        \"name\": \"Fajar Berlian\",\n        \"email\": \"fajarberlian@gmail.com\",\n        \"password\": \"password\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getUsers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Fajar Berlian\",\r\n    \"email\": \"fajarberlian@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base-url}}/users/:id",
+									"host": [
+										"{{base-url}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "getUsers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\" : \"Fajar Berlian\",\r\n    \"email\": \"fajarberlian@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base-url}}/users",
+											"host": [
+												"{{base-url}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=UTF-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 15 Sep 2022 13:45:57 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "428"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"users\": [\n        {\n            \"ID\": 1,\n            \"CreatedAt\": \"2022-09-15T20:42:28.679934+07:00\",\n            \"UpdatedAt\": \"2022-09-15T20:42:28.679934+07:00\",\n            \"DeletedAt\": null,\n            \"name\": \"Ridho Jhulang\",\n            \"email\": \"ridhojhulang@gmail.com\",\n            \"password\": \"asdasdasd\"\n        },\n        {\n            \"ID\": 3,\n            \"CreatedAt\": \"2022-09-15T20:45:07.977914+07:00\",\n            \"UpdatedAt\": \"2022-09-15T20:45:07.977914+07:00\",\n            \"DeletedAt\": null,\n            \"name\": \"Fajar Berlian\",\n            \"email\": \"fajarberlian@gmail.com\",\n            \"password\": \"password\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "updateUser",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Fajar Berlian\",\r\n    \"email\": \"fajarberlian@gmail.com\",\r\n    \"password\" : \"password1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base-url}}/users/:id",
+									"host": [
+										"{{base-url}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "updateUser",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\" : \"Fajar Berlian\",\r\n    \"email\": \"fajarberlian@gmail.com\",\r\n    \"password\" : \"password1234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base-url}}/users/:id",
+											"host": [
+												"{{base-url}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=UTF-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 15 Sep 2022 14:10:33 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "234"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"status\": \"success\",\n    \"users\": {\n        \"ID\": 0,\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"2022-09-15T21:10:33.3669921+07:00\",\n        \"DeletedAt\": null,\n        \"id\": 0,\n        \"name\": \"Fajar Berlian\",\n        \"email\": \"fajarberlian@gmail.com\",\n        \"password\": \"password1234\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base-url}}/users/:id",
+									"host": [
+										"{{base-url}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "deleteUser",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base-url}}/users/:id",
+											"host": [
+												"{{base-url}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=UTF-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 15 Sep 2022 14:11:36 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"deleted user successfully\",\n    \"status\": \"success\"\n}"
+								}
+							]
+						},
+						{
+							"name": "getUserById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Fajar Berlian\",\r\n    \"email\": \"fajarberlian@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base-url}}/users/:id",
+									"host": [
+										"{{base-url}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}

@@ -5,8 +5,6 @@ import (
 	"crud-static/models"
 	"net/http"
 	"strconv"
-
-	"github.com/labstack/echo/v4"
 )
 
 func GetBooksController(c echo.Context) error {
